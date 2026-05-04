@@ -50,7 +50,7 @@ const pdfArchive = [
     "language": "İngilizce",
     "title": "2018 YKS YDT İngilizce",
     "description": "Yabancı Dil Testi (YDT) ve Cevap Anahtarı (İNGİLİZCE)",
-    "url": "assets/pdfs/2018-ydt-i̇ngilizce-ydting01072018.pdf",
+    "url": "assets/pdfs/2018-ydt-ingilizce-ydting01072018.pdf",
     "sourceUrl": "https://dokuman.osym.gov.tr/pdfdokuman/2018/YKS/YDTING01072018.pdf"
   },
   {
@@ -113,7 +113,7 @@ const pdfArchive = [
     "language": "İngilizce",
     "title": "2019 YKS YDT İngilizce",
     "description": "Yabancı Dil Testi (YDT) ve Cevap Anahtarı (İNGİLİZCE)",
-    "url": "assets/pdfs/2019-ydt-i̇ngilizce-ydt_ingilizce_yks_2019_web.pdf",
+    "url": "assets/pdfs/2019-ydt-ingilizce-ydt_ingilizce_yks_2019_web.pdf",
     "sourceUrl": "https://dokuman.osym.gov.tr/pdfdokuman/2019/YKS/TSK/ydt_ingilizce_yks_2019_web.pdf"
   },
   {
@@ -176,7 +176,7 @@ const pdfArchive = [
     "language": "İngilizce",
     "title": "2020 YKS YDT İngilizce",
     "description": "Yabancı Dil Testi (YDT) ve Cevap Anahtarı (İNGİLİZCE)",
-    "url": "assets/pdfs/2020-ydt-i̇ngilizce-ydt_ingilizce_yks_2020.pdf",
+    "url": "assets/pdfs/2020-ydt-ingilizce-ydt_ingilizce_yks_2020.pdf",
     "sourceUrl": "https://dokuman.osym.gov.tr/pdfdokuman/2020/YKS/TSK/ydt_ingilizce_yks_2020.pdf"
   },
   {
@@ -239,7 +239,7 @@ const pdfArchive = [
     "language": "İngilizce",
     "title": "2021 YKS YDT İngilizce",
     "description": "Yabancı Dil Testi (YDT) ve Cevap Anahtarı (İNGİLİZCE)",
-    "url": "assets/pdfs/2021-ydt-i̇ngilizce-ydt_ingilizce_yks_2021.pdf",
+    "url": "assets/pdfs/2021-ydt-ingilizce-ydt_ingilizce_yks_2021.pdf",
     "sourceUrl": "https://dokuman.osym.gov.tr/pdfdokuman/2021/YKS/TSK/ydt_ingilizce_yks_2021.pdf"
   },
   {
@@ -302,7 +302,7 @@ const pdfArchive = [
     "language": "İngilizce",
     "title": "2022 YKS YDT İngilizce",
     "description": "Yabancı Dil Testi (YDT) ve Cevap Anahtarı (İNGİLİZCE)",
-    "url": "assets/pdfs/2022-ydt-i̇ngilizce-yks_2022_ydt_ingilizce.pdf",
+    "url": "assets/pdfs/2022-ydt-ingilizce-yks_2022_ydt_ingilizce.pdf",
     "sourceUrl": "https://dokuman.osym.gov.tr/pdfdokuman/2022/YKS/TSK/yks_2022_ydt_ingilizce.pdf"
   },
   {
@@ -365,7 +365,7 @@ const pdfArchive = [
     "language": "İngilizce",
     "title": "2023 YKS YDT İngilizce",
     "description": "Yabancı Dil Testi (YDT) ve Cevap Anahtarı (İNGİLİZCE)",
-    "url": "assets/pdfs/2023-ydt-i̇ngilizce-yks_ydt_ing_2023_kitapcik_sp72a.pdf",
+    "url": "assets/pdfs/2023-ydt-ingilizce-yks_ydt_ing_2023_kitapcik_sp72a.pdf",
     "sourceUrl": "https://dokuman.osym.gov.tr/pdfdokuman/2023/YKS/TSK/yks_ydt_ing_2023_kitapcik_Sp72a.pdf"
   },
   {
@@ -428,7 +428,7 @@ const pdfArchive = [
     "language": "İngilizce",
     "title": "2024 YKS YDT İngilizce",
     "description": "Yabancı Dil Testi (YDT) ve Cevap Anahtarı (İNGİLİZCE)",
-    "url": "assets/pdfs/2024-ydt-i̇ngilizce-yks_ydt_ing_2024_kitapcik_sp865a.pdf",
+    "url": "assets/pdfs/2024-ydt-ingilizce-yks_ydt_ing_2024_kitapcik_sp865a.pdf",
     "sourceUrl": "https://dokuman.osym.gov.tr/pdfdokuman/2024/YKS/TSK/yks_ydt_ing_2024_kitapcik_Sp865a.pdf"
   },
   {
@@ -437,7 +437,7 @@ const pdfArchive = [
     "language": "İngilizce",
     "title": "2024 YKS YDT İngilizce",
     "description": "Yabancı Dil Testi (YDT) ve Cevap Anahtarı (İNGİLİZCE)",
-    "url": "assets/pdfs/2024-ydt-i̇ngilizce-yks_grm_ydt_ing_15042025.pdf",
+    "url": "assets/pdfs/2024-ydt-ingilizce-yks_grm_ydt_ing_15042025.pdf",
     "sourceUrl": "https://dokuman.osym.gov.tr/pdfdokuman/2024/YKS/TSK/yks_grm_ydt_ing_15042025.pdf"
   },
   {
@@ -500,7 +500,7 @@ const pdfArchive = [
     "language": "İngilizce",
     "title": "2025 YKS YDT İngilizce",
     "description": "Yabancı Dil Testi (YDT) ve Cevap Anahtarı (İNGİLİZCE)",
-    "url": "assets/pdfs/2025-ydt-i̇ngilizce-yks_ydt_ing_2025_kitapcik_si42.pdf",
+    "url": "assets/pdfs/2025-ydt-ingilizce-yks_ydt_ing_2025_kitapcik_si42.pdf",
     "sourceUrl": "https://dokuman.osym.gov.tr/pdfdokuman/2025/YKS/TSK/yks_ydt_ing_2025_kitapcik_Si42.pdf"
   },
   {
