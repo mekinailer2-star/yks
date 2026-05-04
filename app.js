@@ -634,8 +634,21 @@ const dialogImage = document.querySelector("#dialog-image");
 const dialogTitle = document.querySelector("#dialog-title");
 const closeDialogButton = document.querySelector("#close-dialog");
 
-const completed = new Set(JSON.parse(localStorage.getItem("tyt2018Completed") || "[]"));
-const attempts = new Map(JSON.parse(localStorage.getItem("tyt2018Attempts") || "[]"));
+function readStoredArray(key) {
+  try {
+    const value = JSON.parse(localStorage.getItem(key) || "[]");
+    return Array.isArray(value) ? value : [];
+  } catch {
+    return [];
+  }
+}
+
+function readStoredEntries(key) {
+  return readStoredArray(key).filter((entry) => Array.isArray(entry) && entry.length === 2);
+}
+
+const completed = new Set(readStoredArray("tyt2018Completed"));
+const attempts = new Map(readStoredEntries("tyt2018Attempts"));
 
 year.textContent = new Date().getFullYear();
 
