@@ -653,7 +653,7 @@ const attempts = new Map(readStoredEntries("tyt2018Attempts"));
 year.textContent = new Date().getFullYear();
 
 function getQuestionImage(question) {
-  return `assets/questions/${question.imageDir}/q${String(question.id).padStart(2, "0")}.png`;
+  return `assets/questions/${question.imageDir}/q${String(question.id).padStart(2, "0")}.png?v=20260505-turkce-shared`;
 }
 
 function saveProgress() {
