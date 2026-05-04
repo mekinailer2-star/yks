@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>2026 YKS Çalışma Platformu | 2018 TYT Türkçe</title>
-    <meta name="description" content="2018 TYT Türkçe soruları için ÖSYM PDF görselleri ve sıfırdan başlayanlara uygun detaylı çözümler.">
+    <title>2026 YKS Çalışma Platformu | 2018 TYT</title>
+    <meta name="description" content="2018 TYT soruları için ÖSYM PDF görselleri, interaktif cevap seçimi ve sıfırdan başlayanlara uygun çözümler.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -14,25 +14,27 @@
         <div class="nav-links">
           <a href="#sorular">Sorular</a>
           <a href="#program">Çalışma planı</a>
+          <a href="pdfler.html">PDF arşivi</a>
           <a href="#kaynak">Kaynak</a>
         </div>
       </nav>
       <section id="top" class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">2018 TYT Türkçe • 40 soru</p>
-          <h1>Sıfırdan başlayanlar için adım adım 2018 TYT Türkçe çalışma sayfası</h1>
+          <p class="eyebrow">2018 TYT • Türkçe, Sosyal, Matematik, Fen</p>
+          <h1>Sıfırdan başlayanlar için interaktif 2018 TYT çalışma sayfası</h1>
           <p>
-            ÖSYM PDF'inden kırpılmış soru görselleri, doğru cevap anahtarı, konu etiketi ve temel mantığı anlatan çözümler tek statik sayfada toplandı.
+            ÖSYM PDF'inden kırpılmış soru görselleri, şık seçmeden açılmayan çözümler, konu etiketleri ve temel mantığı anlatan açıklamalar tek statik sayfada toplandı.
           </p>
           <div class="hero-actions">
             <a class="primary-button" href="#sorular">Çalışmaya başla</a>
             <a class="secondary-button" href="#program">Nasıl çalışmalıyım?</a>
+            <a class="secondary-button" href="pdfler.html">PDF arşivini aç</a>
           </div>
         </div>
         <aside class="progress-card" aria-labelledby="progress-heading">
           <p class="eyebrow">İlerleme</p>
           <h2 id="progress-heading">Kendi takibini yap</h2>
-          <p id="progress-text">0/40 soru tamamlandı</p>
+          <p id="progress-text">0/125 soru tamamlandı</p>
           <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
           <button id="reset-progress" type="button">İlerlemeyi sıfırla</button>
         </aside>
@@ -48,17 +50,17 @@
         <div class="plan-grid">
           <article>
             <span>1</span>
-            <h3>Önce görselden kendin dene</h3>
-            <p>Süre tutmadan oku. Bilmediğin kavramı not al, cevabı hemen açma.</p>
+            <h3>Önce şıkkını işaretle</h3>
+            <p>Süre tutmadan oku. Bilmediğin kavramı not al; doğru cevap ve çözüm seçimden sonra açılır.</p>
           </article>
           <article>
             <span>2</span>
-            <h3>Çözümü gerekçesiyle oku</h3>
-            <p>Doğru şıkkın yanında yanlış şıkların neden elendiğine de dikkat et.</p>
+            <h3>Sonra çözümü gerekçesiyle oku</h3>
+            <p>Seçimin yanlışsa nerede koptuğunu bul; doğruysa aynı mantığı kısa not hâline getir.</p>
           </article>
           <article>
             <span>3</span>
-            <h3>Mini notu deftere geçir</h3>
+            <h3>Anladıktan sonra tamamla</h3>
             <p>Her soru tipinden bir kural çıkar. Sonraki denemede bu kuralı kullan.</p>
           </article>
         </div>
@@ -68,31 +70,26 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Soru bankası</p>
-            <h2 id="questions-heading">2018 TYT Türkçe soruları ve çözümleri</h2>
+            <h2 id="questions-heading">2018 TYT soruları ve interaktif çözümleri</h2>
           </div>
-          <p id="result-count">40 soru gösteriliyor</p>
+          <p id="result-count">125 soru gösteriliyor</p>
         </div>
 
         <form class="filters" aria-label="Soru filtreleri">
           <label>
             Arama
-            <input id="search" type="search" placeholder="Konu, beceri veya soru no ara">
+            <input id="search" type="search" placeholder="Ders, konu, beceri veya soru no ara">
+          </label>
+          <label>
+            Ders
+            <select id="section-filter">
+              <option value="">Tüm dersler</option>
+            </select>
           </label>
           <label>
             Konu
             <select id="topic-filter">
               <option value="">Tüm konular</option>
-            </select>
-          </label>
-          <label>
-            Cevap
-            <select id="answer-filter">
-              <option value="">Tüm cevaplar</option>
-              <option>A</option>
-              <option>B</option>
-              <option>C</option>
-              <option>D</option>
-              <option>E</option>
             </select>
           </label>
         </form>
@@ -105,7 +102,7 @@
         <p class="eyebrow">Kaynak</p>
         <h2 id="source-heading">Soru görselleri</h2>
         <p>
-          Görseller, ÖSYM'nin yayımladığı 2018-YKS Temel Yeterlilik Testi (TYT) ve Cevap Anahtarı PDF'inden kırpılarak hazırlanmıştır. Sayfa tamamen statiktir ve GitHub Pages üzerinde ek sunucu gerektirmeden çalışır.
+          Görseller, ÖSYM'nin yayımladığı 2018-YKS Temel Yeterlilik Testi (TYT) ve Cevap Anahtarı PDF'inden kırpılarak hazırlanmıştır. 2018-2025 TYT, AYT ve YDT PDF bağlantıları için <a href="pdfler.html">PDF arşivi sayfasını</a> açabilirsiniz. Sayfa tamamen statiktir ve GitHub Pages üzerinde ek sunucu gerektirmeden çalışır.
         </p>
       </section>
     </main>
@@ -119,7 +116,7 @@
     </dialog>
 
     <footer>
-      <p>2026 YKS çalışma platformu • 2018 TYT Türkçe</p>
+      <p>2026 YKS çalışma platformu • 2018 TYT</p>
       <p>© <span id="year"></span></p>
     </footer>
 

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YKS PDF Arşivi | 2018-2025 TYT AYT YDT</title>
+    <meta name="description" content="2018-2025 YKS TYT, AYT ve YDT ÖSYM PDF soru kitapçıkları ve cevap anahtarları arşivi.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero archive-hero">
+      <nav class="topbar" aria-label="Ana gezinme">
+        <a class="brand" href="index.html#top" aria-label="YKS platformu ana sayfa">YKS 2026</a>
+        <div class="nav-links">
+          <a href="index.html#sorular">Sorular</a>
+          <a href="index.html#program">Çalışma planı</a>
+          <a href="pdfler.html">PDF arşivi</a>
+        </div>
+      </nav>
+      <section id="top" class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">2018-2025 YKS PDF arşivi</p>
+          <h1>TYT, AYT ve YDT kitapçıklarını tek yerden aç veya indir</h1>
+          <p>ÖSYM'nin yayımladığı temel soru kitapçıkları ve cevap anahtarları bağlantıları yıllara göre listelendi. Dosyalar yeni sekmede açılabilir veya doğrudan indirilebilir.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#arsiv">Arşive git</a>
+            <a class="secondary-button" href="index.html">Çalışma sayfasına dön</a>
+          </div>
+        </div>
+        <aside class="progress-card">
+          <p class="eyebrow">Kapsam</p>
+          <h2>8 yıl • 57 PDF</h2>
+          <p>2018-2025 arası TYT, AYT ve beş YDT dili.</p>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section id="arsiv" class="archive-section" aria-labelledby="archive-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PDF arşivi</p>
+            <h2 id="archive-heading">Soru kitapçıkları ve cevap anahtarları</h2>
+          </div>
+          <p id="archive-count">57 PDF gösteriliyor</p>
+        </div>
+
+        <form class="archive-filters" aria-label="PDF filtreleri">
+          <label>
+            Arama
+            <input id="pdf-search" type="search" placeholder="Yıl, sınav veya dil ara">
+          </label>
+          <label>
+            Yıl
+            <select id="pdf-year-filter">
+              <option value="">Tüm yıllar</option>
+            </select>
+          </label>
+          <label>
+            Sınav
+            <select id="pdf-exam-filter">
+              <option value="">Tüm sınavlar</option>
+              <option>TYT</option>
+              <option>AYT</option>
+              <option>YDT</option>
+            </select>
+          </label>
+        </form>
+
+        <div id="archive-list" class="archive-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>2026 YKS çalışma platformu • PDF arşivi</p>
+      <p>© <span id="year"></span></p>
+    </footer>
+
+    <script src="pdf-data.js"></script>
+    <script src="pdfler.js"></script>
+  </body>
+</html>
