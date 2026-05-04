@@ -31,6 +31,13 @@ a { color: inherit; text-decoration: none; }
 
 button, input, select { font: inherit; }
 
+input,
+select,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .hero {
   min-height: 78vh;
   padding: 1.25rem clamp(1rem, 4vw, 4rem) 4rem;
@@ -241,12 +248,26 @@ main { padding: 0 clamp(1rem, 4vw, 4rem) 4rem; }
 .filters select,
 .archive-filters input,
 .archive-filters select {
+  appearance: none;
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 1rem;
   background: var(--surface-strong);
   color: var(--ink);
   padding: 0.9rem 1rem;
+}
+
+.filters select,
+.archive-filters select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 1.15rem) 50%,
+    calc(100% - 0.8rem) 50%;
+  background-size: 0.35rem 0.35rem;
+  background-repeat: no-repeat;
+  padding-right: 2.2rem;
 }
 
 .question-grid {
@@ -497,6 +518,7 @@ main { padding: 0 clamp(1rem, 4vw, 4rem) 4rem; }
   max-width: 1180px;
   margin: 0 auto;
   padding-top: 1rem;
+  overflow: hidden;
 }
 
 .archive-grid {
@@ -527,15 +549,18 @@ main { padding: 0 clamp(1rem, 4vw, 4rem) 4rem; }
 .pdf-card {
   display: grid;
   gap: 0.8rem;
+  align-content: space-between;
   background: var(--surface-strong);
   border: 1px solid var(--line);
   border-radius: 1.15rem;
   padding: 1rem;
+  min-width: 0;
 }
 
 .pdf-card h3 {
   margin: 0;
   font-size: 1.05rem;
+  line-height: 1.25;
 }
 
 .pdf-card p {
@@ -550,8 +575,11 @@ main { padding: 0 clamp(1rem, 4vw, 4rem) 4rem; }
 }
 
 .pdf-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
-  padding: 0.65rem 0.85rem;
+  padding: 0.75rem 1rem;
   font-weight: 900;
   font-size: 0.9rem;
 }
@@ -564,6 +592,15 @@ main { padding: 0 clamp(1rem, 4vw, 4rem) 4rem; }
 .pdf-actions a:last-child {
   background: var(--accent-soft);
   color: var(--accent);
+}
+
+.archive-empty {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  color: var(--muted);
+  font-weight: 800;
 }
 
 .image-dialog {
@@ -617,6 +654,42 @@ footer {
 }
 
 @media (max-width: 560px) {
+  body {
+    background: radial-gradient(circle at top left, #ffe4c7 0, transparent 22rem), var(--bg);
+  }
+
+  .hero {
+    padding: 0.85rem 1rem 2.25rem;
+  }
+
+  .archive-hero {
+    padding-bottom: 1.25rem;
+  }
+
+  main {
+    padding: 0 1rem 2.5rem;
+  }
+
+  .topbar {
+    padding-bottom: 2rem;
+  }
+
+  .brand {
+    font-size: 1.15rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.2rem, 12vw, 3.65rem);
+    letter-spacing: -0.065em;
+  }
+
+  .section-heading h2,
+  .study-plan h2,
+  .source-box h2 {
+    font-size: clamp(2rem, 10vw, 2.85rem);
+    line-height: 1.02;
+  }
+
   .question-header,
   .section-heading,
   footer {
@@ -624,8 +697,99 @@ footer {
     flex-direction: column;
   }
 
+  .filters,
+  .archive-filters {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .filters label,
+  .archive-filters label {
+    width: 100%;
+  }
+
+  .filters input,
+  .filters select,
+  .archive-filters input,
+  .archive-filters select {
+    min-height: 3.45rem;
+    border-radius: 1.05rem;
+    font-size: 1rem;
+  }
+
+  .question-grid {
+    max-height: 11rem;
+    overflow: auto;
+    margin-inline: 0;
+    padding: 0.65rem;
+  }
+
+  .question-pill {
+    width: 2.55rem;
+    height: 2.55rem;
+    font-size: 0.78rem;
+  }
+
   .hero-actions a { width: 100%; text-align: center; }
-  .question-card { border-radius: 1.3rem; }
+
+  .question-card,
+  .study-plan,
+  .source-box,
+  .archive-year {
+    border-radius: 1.3rem;
+  }
+
+  .question-card {
+    padding: 0.9rem;
+  }
+
+  .question-header h2 {
+    font-size: 1.65rem;
+  }
+
   .choice-grid { grid-template-columns: repeat(3, 1fr); }
-  .answer-badge { width: 3.2rem; height: 3.2rem; }
+
+  .attempt-badge {
+    width: 100%;
+    min-height: 2.7rem;
+  }
+
+  .archive-section {
+    padding-top: 0;
+  }
+
+  .archive-grid {
+    gap: 0.85rem;
+  }
+
+  .archive-year {
+    padding: 1rem;
+  }
+
+  .archive-year h2 {
+    font-size: 2.15rem;
+  }
+
+  .pdf-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pdf-card {
+    border-radius: 1rem;
+    gap: 1rem;
+  }
+
+  .pdf-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .pdf-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+    gap: 0.6rem;
+  }
 }

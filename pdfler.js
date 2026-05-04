@@ -36,6 +36,12 @@ function renderArchive() {
   }, {});
 
   archiveList.innerHTML = "";
+  if (!filtered.length) {
+    archiveList.innerHTML = `<div class="archive-empty">Bu filtrelerle PDF bulunamadı.</div>`;
+    archiveCount.textContent = "0 PDF gösteriliyor";
+    return;
+  }
+
   Object.keys(grouped).sort((a, b) => b - a).forEach((pdfYear) => {
     const section = document.createElement("section");
     section.className = "archive-year";
