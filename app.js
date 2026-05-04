@@ -521,11 +521,110 @@ const questions = [
   }
 ];
 
+
+const practiceSections = [
+  { id: "turkce", label: "Türkçe", shortLabel: "T", imageDir: "2018-tyt-turkce", count: questions.length },
+  { id: "sosyal", label: "Sosyal Bilimler", shortLabel: "S", imageDir: "2018-tyt-sosyal", count: 25 },
+  { id: "matematik", label: "Temel Matematik", shortLabel: "M", imageDir: "2018-tyt-matematik", count: 40 },
+  { id: "fen", label: "Fen Bilimleri", shortLabel: "F", imageDir: "2018-tyt-fen", count: 20 }
+];
+
+const generatedSectionData = {
+  sosyal: {
+    label: "Sosyal Bilimler",
+    shortLabel: "S",
+    imageDir: "2018-tyt-sosyal",
+    answers: ["B", "C", "D", "C", "A", "C", "C", "A", "E", "B", "B", "D", "B", "E", "E", "A", "E", "D", "B", "D", "A", "A", "E", "C", "B"],
+    topics: [
+      "Tarih: İlk Türk Devletleri", "Tarih: İslamiyet Sonrası Türk Devletleri", "Tarih: Osmanlı Kuruluş Dönemi", "Tarih: Millî Mücadele", "Tarih: Cumhuriyet İnkılapları",
+      "Coğrafya: Coğrafyanın Bölümleri", "Coğrafya: Nüfus ve Yerleşme", "Coğrafya: İklim Grafikleri", "Coğrafya: Harita ve Bölge", "Coğrafya: Doğal Afetler",
+      "Felsefe: Bilgi Felsefesi", "Felsefe: Bilim Felsefesi", "Felsefe: Varlık Felsefesi", "Felsefe: Ahlak Felsefesi", "Felsefe: Din Felsefesi",
+      "Din Kültürü: İnanç ve Değerler", "Din Kültürü: Teyemmüm", "Din Kültürü: Peygamberlik", "Din Kültürü: Ahlaki Tutumlar", "Din Kültürü: İslam Ahlakı",
+      "Felsefe: Dil ve Anlam", "Felsefe: İnsan Felsefesi", "Felsefe: Sanat Felsefesi", "Felsefe: Din Felsefesi", "Felsefe: Siyaset Felsefesi"
+    ],
+    skill: "Metindeki bilgiden çıkarım yapma",
+    guidance: "Sosyal sorularında önce soru kökünün ne istediğini bul, sonra metin/harita/grafikte doğrudan verilen bilgi ile yorum gerektiren bilgiyi ayır."
+  },
+  matematik: {
+    label: "Temel Matematik",
+    shortLabel: "M",
+    imageDir: "2018-tyt-matematik",
+    answers: ["D", "E", "B", "C", "B", "C", "D", "A", "B", "E", "B", "D", "C", "A", "B", "E", "A", "D", "A", "E", "E", "A", "D", "A", "A", "D", "E", "C", "D", "D", "C", "C", "C", "D", "B", "A", "B", "A", "C", "B"],
+    topics: [
+      "Sayılar ve Kesirler", "Oran-Orantı", "Örüntü ve Sayma", "Üslü/Köklü İfadeler", "Sembolik İşlem",
+      "Sıralama ve Eşitsizlik", "Problem Kurma", "Aritmetik İşlem", "Mantık ve Önermeler", "Terazi Problemi",
+      "Aralık ve Sayı Doğrusu", "Yaş Problemi", "Tablo Okuma", "Fonksiyon Grafiği", "Bölünebilme",
+      "Cebirsel İfadeler", "Problemler", "Tablo ve Oran", "Hız/İş/Zaman", "Paragraf-Türü Matematik",
+      "Kümeler", "Kümeler ve Sayma", "Tuş Takımı Problemi", "Karışım/Yüzde", "Grafik Okuma",
+      "Veri Yorumlama", "Analitik Düşünme", "Katı Cisimler", "Olasılık", "Geometri: Üçgen",
+      "Analitik Geometri", "Geometri: Dik Üçgen", "Geometri: Alan", "Geometri: Katlama", "Analitik Geometri",
+      "Geometri: Çember", "Geometri: Çokgen", "Grafik ve Eğim", "Katı Cisim", "Geometri: Alan-Oran"
+    ],
+    skill: "Verilenleri matematik diline çevirme",
+    guidance: "Matematik sorularında şekli veya metni hemen formüle çevirmeye çalışma; önce verilenleri, isteneni ve seçeneklerin hangi büyüklüğü temsil ettiğini ayır."
+  },
+  fen: {
+    label: "Fen Bilimleri",
+    shortLabel: "F",
+    imageDir: "2018-tyt-fen",
+    answers: ["E", "C", "A", "D", "D", "B", "E", "E", "C", "A", "D", "E", "A", "D", "C", "B", "E", "E", "D", "E"],
+    topics: [
+      "Fizik: Bilimsel Bilgi", "Fizik: Grafik Okuma", "Fizik: Kaldırma Kuvveti", "Fizik: Isı ve Sıcaklık", "Fizik: Elektriklenme",
+      "Fizik: Aydınlanma", "Fizik: Optik", "Kimya: Atom Modelleri", "Kimya: Periyodik Özellikler", "Kimya: Kimyasal Bağlar",
+      "Kimya: Buhar Basıncı", "Kimya: Mürekkepler", "Kimya: Karışımlar", "Kimya: Organik Kimya", "Biyoloji: Ekoloji",
+      "Biyoloji: Hücre Zarı", "Biyoloji: Canlıların Özellikleri", "Biyoloji: Hücre Bölünmesi", "Biyoloji: Kalıtım", "Biyoloji: Enzimler"
+    ],
+    skill: "Bilimsel kavramı örnek üzerinde yorumlama",
+    guidance: "Fen sorularında kavram tanımını ezber gibi değil, deney/şekil/grafikte hangi değişkenin neyi etkilediği üzerinden kontrol et."
+  }
+};
+
+function makeGeneratedSolution(sectionConfig, questionNumber, topic, answer) {
+  return [
+    `${sectionConfig.guidance} Bu soruda konu başlığı '${topic}' olduğu için ilk adım, görselde verilen bilgileri ve soru kökünün istediği sonucu ayrı ayrı not etmektir.`,
+    `Seçenekleri tek tek kontrol ederken metinde, tabloda, grafikte veya şekilde desteklenmeyen ifadeleri ele. İşlem sorularında sonucu seçeneklerle karşılaştır; yorum sorularında yalnızca verilenlerden çıkarılabilen yargıyı seç.`,
+    `Bu eleme sonunda tutarlı kalan seçenek ${answer} olur. Cevabı görmeden önce kendi seçiminle karşılaştır; farklıysa özellikle hangi seçeneği neden elediğini tekrar gözden geçir.`
+  ];
+}
+
+function buildGeneratedQuestions(sectionId, config) {
+  return config.answers.map((answer, index) => {
+    const id = index + 1;
+    const topic = config.topics[index] || config.label;
+    return {
+      id,
+      sectionId,
+      sectionLabel: config.label,
+      sectionShortLabel: config.shortLabel,
+      key: `${sectionId}-${id}`,
+      imageDir: config.imageDir,
+      answer,
+      topic,
+      skill: config.skill,
+      summary: `${config.label} ${id}. soru: ${topic} kazanımını ölçer.`,
+      solution: makeGeneratedSolution(config, id, topic, answer),
+      takeaway: "Önce kendi cevabını işaretle; çözümü yalnızca denemeden sonra açarak kalıcı öğrenme sağlamaya çalış."
+    };
+  });
+}
+
+const allQuestions = [
+  ...questions.map((question) => ({
+    ...question,
+    sectionId: "turkce",
+    sectionLabel: "Türkçe",
+    sectionShortLabel: "T",
+    key: `turkce-${question.id}`,
+    imageDir: "2018-tyt-turkce"
+  })),
+  ...Object.entries(generatedSectionData).flatMap(([sectionId, config]) => buildGeneratedQuestions(sectionId, config))
+];
+
 const questionGrid = document.querySelector("#question-grid");
 const questionList = document.querySelector("#question-list");
 const searchInput = document.querySelector("#search");
+const sectionFilter = document.querySelector("#section-filter");
 const topicFilter = document.querySelector("#topic-filter");
-const answerFilter = document.querySelector("#answer-filter");
 const progressText = document.querySelector("#progress-text");
 const progressBar = document.querySelector("#progress-bar");
 const resetButton = document.querySelector("#reset-progress");
@@ -535,92 +634,164 @@ const dialogImage = document.querySelector("#dialog-image");
 const dialogTitle = document.querySelector("#dialog-title");
 const closeDialogButton = document.querySelector("#close-dialog");
 
-const completed = new Set(JSON.parse(localStorage.getItem("tyt2018TurkceCompleted") || "[]"));
+const completed = new Set(JSON.parse(localStorage.getItem("tyt2018Completed") || "[]"));
+const attempts = new Map(JSON.parse(localStorage.getItem("tyt2018Attempts") || "[]"));
 
 year.textContent = new Date().getFullYear();
 
-function getQuestionImage(id) {
-  return `assets/questions/2018-tyt-turkce/q${String(id).padStart(2, "0")}.png`;
+function getQuestionImage(question) {
+  return `assets/questions/${question.imageDir}/q${String(question.id).padStart(2, "0")}.png`;
 }
 
 function saveProgress() {
-  localStorage.setItem("tyt2018TurkceCompleted", JSON.stringify([...completed]));
+  localStorage.setItem("tyt2018Completed", JSON.stringify([...completed]));
+}
+
+function saveAttempts() {
+  localStorage.setItem("tyt2018Attempts", JSON.stringify([...attempts]));
+}
+
+function getAttempt(question) {
+  return attempts.get(question.key) || null;
+}
+
+function hasAttempted(question) {
+  return Boolean(getAttempt(question));
 }
 
 function updateProgress() {
   const count = completed.size;
-  const percent = Math.round((count / questions.length) * 100);
-  progressText.textContent = `${count}/${questions.length} soru tamamlandı`;
+  const percent = Math.round((count / allQuestions.length) * 100);
+  progressText.textContent = `${count}/${allQuestions.length} soru tamamlandı`;
   progressBar.style.width = `${percent}%`;
 }
 
+function createOption(value, textContent) {
+  const option = document.createElement("option");
+  option.value = value;
+  option.textContent = textContent;
+  return option;
+}
+
 function populateFilters() {
-  const topics = [...new Set(questions.map((question) => question.topic))].sort((a, b) => a.localeCompare(b, "tr"));
-  topics.forEach((topic) => {
-    const option = document.createElement("option");
-    option.value = topic;
-    option.textContent = topic;
-    topicFilter.appendChild(option);
+  practiceSections.forEach((section) => {
+    sectionFilter.appendChild(createOption(section.id, section.label));
   });
+  populateTopicFilter();
+}
+
+function populateTopicFilter() {
+  const selectedSection = sectionFilter.value;
+  const currentTopic = topicFilter.value;
+  topicFilter.innerHTML = "";
+  topicFilter.appendChild(createOption("", "Tüm konular"));
+  const source = selectedSection ? allQuestions.filter((question) => question.sectionId === selectedSection) : allQuestions;
+  const topics = [...new Set(source.map((question) => question.topic))].sort((a, b) => a.localeCompare(b, "tr"));
+  topics.forEach((topic) => topicFilter.appendChild(createOption(topic, topic)));
+  topicFilter.value = topics.includes(currentTopic) ? currentTopic : "";
 }
 
 function renderQuestionGrid(filteredQuestions) {
   questionGrid.innerHTML = "";
   filteredQuestions.forEach((question) => {
     const link = document.createElement("a");
-    link.className = `question-pill ${completed.has(question.id) ? "is-done" : ""}`;
-    link.href = `#soru-${question.id}`;
-    link.textContent = question.id;
-    link.setAttribute("aria-label", `${question.id}. soruya git`);
+    const attemptedClass = hasAttempted(question) ? " is-attempted" : "";
+    link.className = `question-pill ${completed.has(question.key) ? "is-done" : ""}${attemptedClass}`;
+    link.href = `#soru-${question.key}`;
+    link.textContent = `${question.sectionShortLabel}${question.id}`;
+    link.setAttribute("aria-label", `${question.sectionLabel} ${question.id}. soruya git`);
     questionGrid.appendChild(link);
   });
 }
 
-function renderQuestions() {
+function getFilteredQuestions() {
   const search = searchInput.value.trim().toLocaleLowerCase("tr");
+  const section = sectionFilter.value;
   const topic = topicFilter.value;
-  const answer = answerFilter.value;
 
-  const filtered = questions.filter((question) => {
-    const text = `${question.id} ${question.topic} ${question.skill} ${question.summary} ${question.answer}`.toLocaleLowerCase("tr");
-    return (!search || text.includes(search)) && (!topic || question.topic === topic) && (!answer || question.answer === answer);
+  return allQuestions.filter((question) => {
+    const text = `${question.id} ${question.sectionLabel} ${question.topic} ${question.skill} ${question.summary}`.toLocaleLowerCase("tr");
+    return (!search || text.includes(search)) && (!section || question.sectionId === section) && (!topic || question.topic === topic);
   });
+}
 
+function renderChoiceButtons(question) {
+  const attempted = getAttempt(question);
+  return ["A", "B", "C", "D", "E"].map((choice) => {
+    let stateClass = "";
+    if (attempted) {
+      if (choice === question.answer) stateClass = " is-correct";
+      if (choice === attempted && attempted !== question.answer) stateClass = " is-wrong";
+    }
+    return `<button class="choice-button${stateClass}" type="button" data-key="${question.key}" data-choice="${choice}" ${attempted ? "disabled" : ""}>${choice}</button>`;
+  }).join("");
+}
+
+function renderFeedback(question) {
+  const attempted = getAttempt(question);
+  if (!attempted) {
+    return `<p class="quiz-hint">Çözümü ve doğru cevabı görmek için önce bir şık işaretle.</p>`;
+  }
+  const isCorrect = attempted === question.answer;
+  return `<div class="feedback ${isCorrect ? "is-correct" : "is-wrong"}">
+    ${isCorrect ? "Doğru işaretledin." : `Seçimin ${attempted}; doğru cevap ${question.answer}.`} Şimdi çözümü adım adım inceleyebilirsin.
+  </div>`;
+}
+
+function renderSolution(question) {
+  if (!hasAttempted(question)) {
+    return `<div class="solution-locked">
+      <h3>Çözüm kilitli</h3>
+      <p>Önce kendi cevabını seç. Böylece cevabı görmeden aktif şekilde düşünmüş olursun.</p>
+    </div>`;
+  }
+  return `<div class="solution-panel">
+    <div class="meta-row">
+      <span>${question.skill}</span>
+      <span>Doğru cevap: ${question.answer}</span>
+    </div>
+    <h3>Adım adım çözüm</h3>
+    <ol>${question.solution.map((step) => `<li>${step}</li>`).join("")}</ol>
+    <div class="takeaway"><strong>Mini not:</strong> ${question.takeaway}</div>
+    <label class="complete-toggle">
+      <input type="checkbox" data-id="${question.key}" ${completed.has(question.key) ? "checked" : ""}>
+      Bu soruyu anladım
+    </label>
+  </div>`;
+}
+
+function renderQuestions() {
+  const filtered = getFilteredQuestions();
   renderQuestionGrid(filtered);
   questionList.innerHTML = "";
 
   filtered.forEach((question) => {
     const article = document.createElement("article");
     article.className = "question-card";
-    article.id = `soru-${question.id}`;
+    article.id = `soru-${question.key}`;
     article.innerHTML = `
       <div class="question-header">
         <div>
-          <p class="eyebrow">${question.topic}</p>
+          <p class="eyebrow">${question.sectionLabel} • ${question.topic}</p>
           <h2>${question.id}. Soru</h2>
           <p>${question.summary}</p>
         </div>
-        <div class="answer-badge" aria-label="Doğru cevap ${question.answer}">${question.answer}</div>
+        <div class="attempt-badge ${hasAttempted(question) ? "is-open" : ""}">${hasAttempted(question) ? "Çözüm açık" : "Önce dene"}</div>
       </div>
       <div class="question-body">
-        <button class="image-button" data-image="${getQuestionImage(question.id)}" data-title="${question.id}. Soru görseli">
-          <img src="${getQuestionImage(question.id)}" alt="2018 TYT Türkçe ${question.id}. soru ÖSYM PDF görseli" loading="lazy">
+        <button class="image-button" data-image="${getQuestionImage(question)}" data-title="${question.sectionLabel} ${question.id}. soru görseli">
+          <img src="${getQuestionImage(question)}" alt="2018 TYT ${question.sectionLabel} ${question.id}. soru ÖSYM PDF görseli" loading="lazy">
           <span>Görseli büyüt</span>
         </button>
-        <div class="solution-panel">
-          <div class="meta-row">
-            <span>${question.skill}</span>
-            <span>Doğru cevap: ${question.answer}</span>
+        <div class="quiz-column">
+          <div class="quiz-panel">
+            <h3>Cevabını seç</h3>
+            <div class="choice-grid" aria-label="${question.sectionLabel} ${question.id}. soru cevap seçenekleri">
+              ${renderChoiceButtons(question)}
+            </div>
+            ${renderFeedback(question)}
           </div>
-          <h3>Adım adım çözüm</h3>
-          <ol>
-            ${question.solution.map((step) => `<li>${step}</li>`).join("")}
-          </ol>
-          <div class="takeaway"><strong>Mini not:</strong> ${question.takeaway}</div>
-          <label class="complete-toggle">
-            <input type="checkbox" data-id="${question.id}" ${completed.has(question.id) ? "checked" : ""}>
-            Bu soruyu anladım
-          </label>
+          ${renderSolution(question)}
         </div>
       </div>
     `;
@@ -641,20 +812,31 @@ populateFilters();
 updateProgress();
 renderQuestions();
 
-[searchInput, topicFilter, answerFilter].forEach((element) => {
-  element.addEventListener("input", renderQuestions);
+searchInput.addEventListener("input", renderQuestions);
+sectionFilter.addEventListener("input", () => {
+  populateTopicFilter();
+  renderQuestions();
 });
+topicFilter.addEventListener("input", renderQuestions);
 
 questionList.addEventListener("click", (event) => {
   const imageButton = event.target.closest(".image-button");
   if (imageButton) {
     openDialog(imageButton.dataset.image, imageButton.dataset.title);
+    return;
+  }
+
+  const choiceButton = event.target.closest(".choice-button[data-key]");
+  if (choiceButton) {
+    attempts.set(choiceButton.dataset.key, choiceButton.dataset.choice);
+    saveAttempts();
+    renderQuestions();
   }
 });
 
 questionList.addEventListener("change", (event) => {
   if (!event.target.matches("input[type='checkbox'][data-id]")) return;
-  const id = Number(event.target.dataset.id);
+  const id = event.target.dataset.id;
   if (event.target.checked) {
     completed.add(id);
   } else {
@@ -667,7 +849,9 @@ questionList.addEventListener("change", (event) => {
 
 resetButton.addEventListener("click", () => {
   completed.clear();
+  attempts.clear();
   saveProgress();
+  saveAttempts();
   updateProgress();
   renderQuestions();
 });
