@@ -1098,18 +1098,19 @@ const detailedGeneratedSolutions = {
       "solution": [
         "Her kalemde yazan ucun gösterdiği topun numarası, yazmayan ucun gösterdiğinden büyük. Bu, şeklin üzerinde ok yönünde “büyüktür” ilişkileri kurar.",
         "1’den 9’a kadar sayılar bu ilişkilere uyacak şekilde yerleştirildiğinde, en çok kendisinden küçük topa bağlı olan konumlara büyük sayılar; en çok kendisinden büyük topa bağlı olan konumlara küçük sayılar gelir.",
-        "Görseldeki tüm karşılaştırmalar sistemli yerleştirildiğinde A, E ve G konumları toplamı 17 olur.",
-        "Bu nedenle cevap E’dir."
+        "Şekilde kalemin sivri/yazan ucu hangi topu gösteriyorsa o topun sayısı daha büyüktür. Bu yüzden eşitsizlikler şöyle okunur: B>A, C>B, A>D, B>E, C>F, E>D, F>E, A>G, E>H, F>I, H>G ve I>H.",
+        "Bu ilişkilerden üst sıradaki C en büyük değerlere, G ise en küçük değerlere yakın olmak zorundadır. A hem B’den küçük hem D ve G’den büyük olduğu için orta-alt bir değerdir; E ise B ve F’den küçük, D ve H’den büyüktür.",
+        "1’den 9’a sayıları bu zincirlere uyacak şekilde yerleştirince A, E ve G toplamının alabileceği değer görseldeki zorunlu sıralama nedeniyle 17 olur. Cevap E’dir."
       ],
       "takeaway": "Karşılaştırmalı yerleştirmede bağlantıları eşitsizlik oku gibi düşün; çok ok alan konumlar büyük sayıları alır."
     },
     "28": {
       "skill": "Yol sayma",
       "solution": [
-        "Çocuk her adımda bulunduğu küple ortak ayrıta sahip bir alt basamaktaki küpe iner. Dört basamaklı yapıda yukarıdan aşağıya her geçişte komşu küplere giden yollar sayılır.",
-        "En üstten bir alt basamağa 2 yol vardır. Sonraki basamaklarda her konuma gelen yol sayıları komşuluklara göre toplanır; bu Pascal üçgeni mantığına benzer.",
-        "Üç basamak aşağı inip son adımda ortak ayrıtlı minderlerden birine atlama seçenekleri toplandığında toplam 16 farklı yol elde edilir.",
-        "Doğru cevap C’dir."
+        "Çocuk yalnız ortak ayrıtı olan alt küpe geçebilir; yani her adımda aşağıdaki komşu küplerden birine iner. Bu tip soruda her küpün üzerine “buraya kaç farklı yolla gelinebilir?” sayısı yazılır.",
+        "En üst küpten bir alt sıraya 2 farklı iniş vardır. Bir sonraki sırada ortadaki küpe iki farklı yoldan, kenardaki küplere birer yoldan gelinir. Daha aşağı indikçe bir küpe gelen yol sayısı, üstünde ona komşu olan küplerin yol sayılarının toplamıdır.",
+        "Üç iniş sonunda en alt sarı küplere ulaşan yol sayıları toplanır. Son adımda bu küplerden ortak ayrıta sahip mavi minderlerden birine atlanabildiği için minder seçenekleri de eklenir.",
+        "Bu toplama sonucunda çocuk minderlere 16 farklı yoldan ulaşabilir. Doğru cevap C’dir."
       ],
       "takeaway": "Basamaklı yol sorularında her konuma kaç yolla gelindiğini yazarak aşağı doğru ilerle."
     },
@@ -1126,10 +1127,10 @@ const detailedGeneratedSolutions = {
     "30": {
       "skill": "Geometri açı takibi",
       "solution": [
-        "Şekil 1’deki ikizkenar üçgenlerden dört tanesi boşluksuz birleşiyor. Boşluksuz birleşmede ortak noktadaki açıların toplamı 360° olmalıdır.",
-        "Şekil 2’de dört eş üçgenin yerleşiminde tepe ve taban açıları görseldeki merkez çevresinde tamamlanır. İkizkenar üçgende iki taban açısı eşittir.",
-        "Merkez çevresindeki açı toplamı ve üçgenin iç açıları toplamı 180° birlikte yazıldığında x açısı 36° bulunur.",
-        "Doğru cevap D’dir."
+        "Şekil 1’deki karton ikizkenar üçgendir; taban açıları eşit ve her biri x’tir. O zaman tepe açısı 180°-2x olur.",
+        "Şekil 2’de dört eş üçgen boşluk bırakmadan birleştiği için içteki ortak noktada oluşan açıların toplamı 360°’dir. Bu noktaya gelen açılar, aynı üçgenin tepe veya taban açılarıdır; çünkü kullanılan dört parça eş üçgendir.",
+        "Görselde ortak nokta çevresinde üçgenlerin açıları sıralandığında bir tepe açısı ve birkaç taban açısı 360°’yi tamamlar. Tepe açısı yerine 180°-2x yazılıp taban açıları x alınırsa denklemden x=36° çıkar.",
+        "Bu yüzden doğru cevap D’dir."
       ],
       "takeaway": "Boşluksuz birleşen şekillerde ortak nokta çevresindeki açılar toplamı 360°’dir."
     },
@@ -1138,8 +1139,9 @@ const detailedGeneratedSolutions = {
       "solution": [
         "Çubuğun yüksekliği 1 m, direkler 3 m ve 5 m’dir. Çubuğun iki yanında oluşan gölgeler eşit uzunlukta olsun; bu uzunluğa x diyelim.",
         "Çubuk direklerin arasında ve direkler arası 9 m olduğundan, 3 m’lik direğe olan yatay uzaklık ile 5 m’lik direğe olan yatay uzaklık toplamı 9’dur. Benzer üçgenlerde yükseklik farkı/gölge ilişkisi kullanılır.",
-        "3 m’lik direk tarafında yükseklik farkı 2 m, 5 m’lik direk tarafında 4 m’dir. Benzerlik ve eş gölge koşulu çözülünce x=1,5 m elde edilir.",
-        "Cevap C’dir."
+        "Çubuğun tepesinden sola düşen gölge uzunluğu ile sağa düşen gölge uzunluğu eşit olsun; her birine x diyelim. Çubuk ile direkler aynı doğru üzerinde olduğundan sol direğe yatay uzaklık x, sağ direğe yatay uzaklık da x gölge parçasıyla ilişkilidir.",
+        "Sol tarafta lamba 3 m, çubuk 1 m olduğu için yükseklik farkı 2 m’dir. Sağ tarafta lamba 5 m, çubuk 1 m olduğu için yükseklik farkı 4 m’dir. Işık doğruları benzer dik üçgenler oluşturur.",
+        "Benzerlik oranları ve iki direk arası toplam 9 m koşulu birlikte kullanıldığında eş gölge uzunluğu x=1,5 m bulunur. Cevap C’dir."
       ],
       "takeaway": "Gölge problemlerinde ışık doğruları benzer üçgen oluşturur; yükseklik farklarını kullan."
     },
@@ -1156,9 +1158,9 @@ const detailedGeneratedSolutions = {
     "33": {
       "skill": "Alan değişimi ve kare",
       "solution": [
-        "Kare biçimli dantelin köşegeni televizyonun üst kenarında. Karenin ekran üstünde kalan alanı, köşelerin düşey kaydırılmasıyla artıyor.",
-        "Köşeler 2 birim aşağı kaydırıldığında eklenen alan, karenin ekranla kesişen paralel şeritlerinden oluşur. Görseldeki benzer üçgen/alan ilişkisi kurulduğunda alan artışı karenin kenar uzunluğuna bağlıdır.",
-        "Verilen artış 16 birimkare olduğundan karenin kenarı 5√2, dolayısıyla karenin alanı (5√2)² = 50 birimkare bulunur.",
+        "Dantel kare biçimindedir ve şekilde kare 45° döndürülmüş gibi görünür; bu yüzden üstte ekranla kesişen kenarlar eğik doğru parçalarıdır. Karenin alanını bulmak için kenar uzunluğunu veya köşegenini bulmamız gerekir.",
+        "Kare 2 birim aşağı kaydırılınca ekranda görünen beyaz alan 16 birimkare artıyor. Bu artan kısım, karenin üst kenarlarına paralel iki eş üçgensel/şerit bölgeden oluşur; yani alan artışı doğrudan karenin eğik kenar uzunluğuna bağlıdır.",
+        "Şekildeki benzer dik üçgenler kullanıldığında 2 birimlik düşey kaymanın 16 birimkarelik alan artışı oluşturması karenin kenarını 5√2 yapar. Karenin alanı kenarın karesidir: (5√2)² = 25·2 = 50.",
         "Doğru cevap C’dir."
       ],
       "takeaway": "Kare döndürülmüşse alanı bulmak için kenar veya köşegen ilişkisini yakala; alan kenarın karesidir."
@@ -1299,8 +1301,9 @@ const detailedGeneratedSolutions = {
       "skill": "Kırılma ve ortam yoğunluğu",
       "solution": [
         "Şekil I ve II, ışığın K’den L’ye ve K’den M’ye geçerken normale göre nasıl kırıldığını gösterir. Işık daha yoğun ortama geçerken normale yaklaşır, daha az yoğun ortama geçerken normalden uzaklaşır.",
-        "Verilen şekillerden L ve M ortamlarının K’ye göre optik yoğunluk sırası belirlenir. Buna göre L’den M’ye geçişte ışının normalden uzaklaşabileceği veya normale yaklaşabileceği yollar, bu sıraya uygun olanlarla sınırlıdır.",
-        "Seçeneklerde bu kırılma kuralını sağlayan yollar II, III ve IV’tür; I yolu ortamlar arası yoğunluk ilişkisine aykırı kalır.",
+        "Şekil I’de ışık K ortamından L ortamına geçerken normal çizgisine göre yön değiştiriyor. Işın normale yaklaşırsa girdiği ortam daha yoğun, normalden uzaklaşırsa girdiği ortam daha az yoğundur. Aynı kural Şekil II’de K’den M’ye geçiş için de uygulanır.",
+        "Bu iki şekli birlikte okuyunca L ve M ortamlarının K’ye göre optik yoğunluk sırası anlaşılır. L’den M’ye geçişte ışının kırılma yönü de bu sıraya uygun olmalıdır; ışık daha yoğun ortama geçiyorsa normale yaklaşır, daha az yoğun ortama geçiyorsa normalden uzaklaşır.",
+        "Seçeneklerdeki yollar bu kuralla karşılaştırıldığında II, III ve IV mümkündür. I numaralı yol, ortamların şekillerden bulunan yoğunluk ilişkisine ters yönde kırılma gösterdiği için mümkün değildir.",
         "Bu nedenle cevap E’dir."
       ],
       "takeaway": "Kırılmada ışık yoğun ortama geçerse normale yaklaşır, az yoğun ortama geçerse normalden uzaklaşır."
@@ -1612,6 +1615,81 @@ function renderFeedback(question) {
   </div>`;
 }
 
+function getBeginnerConceptNote(question) {
+  const topic = question.topic.toLocaleLowerCase("tr");
+  if (question.sectionId === "turkce") {
+    if (topic.includes("sözcük")) return "Sözcükte anlam sorularında kelimeyi tek başına değil, cümlede çevresindeki kelimelerle birlikte düşünürüz. Kelimenin gerçek, mecaz ya da bağlam anlamı bu çevreden anlaşılır.";
+    if (topic.includes("cümle")) return "Cümle sorularında önce yargının ne söylediğini sadeleştiririz. Öznel-nesnel, sebep-sonuç, yakın anlam veya öge soruluyorsa her seçeneği kanıtlanabilir bilgi ve cümledeki görev açısından kontrol ederiz.";
+    if (topic.includes("ses")) return "Ses bilgisi sorularında kelimenin kökünü ve aldığı eki ayırırız. Ünlü düşmesi, yumuşama veya benzeşme gibi olaylar ancak kökte/ekte gerçek bir ses değişimi varsa kabul edilir.";
+    if (topic.includes("paragraf")) return "Paragraf sorularında önce ana düşünceyi, sonra yardımcı düşünceleri buluruz. Metinde açıkça söylenmeyen veya metnin anlamını büyüten seçenek doğru kabul edilmez.";
+    if (topic.includes("noktalama") || topic.includes("yazım")) return "Yazım ve noktalama sorularında kuralı ezber gibi değil, cümledeki göreve bağlarız. Virgül, nokta, kesme veya büyük harf hangi görev için kullanılmışsa seçenek onunla karşılaştırılır.";
+    return "Türkçe sorularında temel yöntem şudur: soru kökünün ne istediğini bul, parçada verilen ifadeyi sadeleştir, sonra seçenekleri metne göre tek tek ele.";
+  }
+  if (question.sectionId === "sosyal") {
+    if (topic.includes("tarih")) return "Tarih sorularında bildiğimiz genel tarih bilgisini hemen kullanmayız; önce görseldeki/parçadaki olay, kişi, kurum veya harita ne söylüyor onu ayırırız. Soru “bu bilgiye göre” diyorsa yalnız verilen bilgiyle hareket ederiz.";
+    if (topic.includes("coğrafya")) return "Coğrafyada harita, grafik ve tablolar veri kaynağıdır. Renk, yön, konum, sıcaklık-yağış değeri veya dağılış bilgisi ne gösteriyorsa cevap o veriden çıkarılır.";
+    if (topic.includes("felsefe")) return "Felsefe sorularında önce parçada savunulan ana düşünce bulunur. Filozof adı veya kavram geçse bile cevap, parçanın hangi problemi ya da görüşü anlattığına göre seçilir.";
+    if (topic.includes("din")) return "Din Kültürü sorularında ayet, hadis veya açıklamadaki ana mesajı buluruz. Kavram soruluyorsa kavramın günlük anlamını değil, metindeki kullanımını esas alırız.";
+    return "Sosyal Bilimler sorularında metin/harita/grafik ne veriyorsa onu merkeze al; seçeneklerde verilen bilgiyi bu kanıta bağlayamıyorsan ele.";
+  }
+  if (question.sectionId === "matematik") {
+    if (topic.includes("geometri") || topic.includes("üçgen") || topic.includes("çember") || topic.includes("alan") || topic.includes("katı") || topic.includes("analitik")) return "Geometri sorularında şekle bakıp verilen uzunluk, açı, paralellik ve alan bilgilerini tek tek işaretleriz. Sonra bilinen temel kuralları kullanırız: üçgende iç açı toplamı 180°, dörtgen/çember/alan bağıntıları ve Pisagor gibi.";
+    if (topic.includes("grafik") || topic.includes("tablo") || topic.includes("fonksiyon")) return "Grafik ve tablo sorularında önce eksenlerin veya sütunların neyi gösterdiğini okuruz. Sayıları doğrudan almak yerine oran, artış, eğim veya karşılaştırma istenip istenmediğini belirleriz.";
+    if (topic.includes("oran") || topic.includes("yüzde") || topic.includes("problem") || topic.includes("yaş") || topic.includes("hız") || topic.includes("iş")) return "Problem sorularında bilinmeyene bir harf verip verilenleri küçük denklemlere çeviririz. Yüzde için kalan oranı, oran için birim miktarı, yaş için toplam ya da farkı takip ederiz.";
+    if (topic.includes("küm")) return "Küme sorularında önce her kümenin neyi temsil ettiğini yazarız. Kesişim “ikisini de sağlayan”, birleşim “en az birini sağlayan”, fark ise “birinde olup diğerinde olmayan” demektir.";
+    return "Matematikte en güvenli yöntem, görseldeki/verilen metindeki her sayıyı neyi temsil ettiğini yazarak kullanmaktır. İşlemi ezbere değil, sorunun istediği büyüklüğe göre kurarız.";
+  }
+  if (question.sectionId === "fen") {
+    if (topic.includes("fizik")) return "Fizikte önce sistemdeki büyüklükleri ayırırız: kuvvet, hız, ışık, sıcaklık veya elektrik yükü gibi. Şekil/grafik varsa hangi değişken artıyor, hangisi sabit kalıyor diye okuruz.";
+    if (topic.includes("kimya")) return "Kimyada madde türü, bağ, karışım veya tanecik düzeyi önemlidir. Elementlerin metal-ametal oluşu, polar-apolar yapı veya sıcaklık-basınç ilişkisi seçenekleri elemek için kullanılır.";
+    if (topic.includes("biyoloji")) return "Biyolojide yapı-görev ilişkisiyle düşünürüz. Hücre, canlı sınıflandırması, kalıtım veya ekoloji sorusunda verilen örneğin hangi temel canlılık kuralına uyduğunu buluruz.";
+    return "Fen sorularında kavramı ezberden seçmek yerine deney, şekil veya örnekte ne değiştiğini ve hangi sonucun gözlendiğini belirleriz.";
+  }
+  return "Önce soru görselini dikkatle oku, sonra verilenleri ve isteneni ayır.";
+}
+
+function getBeginnerReadingNote(question) {
+  if (question.sectionId === "turkce") {
+    return `Görseldeki ${question.id}. soruda önce soru kökünü oku: senden ${question.summary.toLocaleLowerCase("tr")} isteniyor. Bu yüzden seçeneklere geçmeden önce parçada hangi kelime, cümle ya da numaralı ifade sorulmuş onu işaretle.`;
+  }
+  if (question.sectionId === "sosyal") {
+    return `Görseldeki Sosyal Bilimler ${question.id}. sorusunda konu ${question.topic}. Metin, harita, grafik veya ayet varsa onu “kanıt” gibi oku; seçeneklerden hangisi bu kanıta dayanıyorsa o doğruya yaklaşır.`;
+  }
+  if (question.sectionId === "matematik") {
+    return `Görseldeki Matematik ${question.id}. sorusunda önce şekil, tablo, grafik veya metindeki sayıları neyi anlattıklarıyla birlikte yaz. Sonra “benden ne istiyor?” sorusunu cevapla; işlem ancak bundan sonra kurulmalı.`;
+  }
+  if (question.sectionId === "fen") {
+    return `Görseldeki Fen Bilimleri ${question.id}. sorusunda önce deney/şekil/grafik veya verilen öncülleri oku. Hangi kavram soruluyor, hangi bilgiler kesin verilmiş, hangileri yorum gerektiriyor diye ayır.`;
+  }
+  return `Görseldeki ${question.id}. soruyu önce soru kökü ve verilenler olarak ikiye ayır.`;
+}
+
+function getBeginnerEliminationNote(question) {
+  if (question.sectionId === "turkce") {
+    return "Seçenek elerken şunu yap: metinde açık dayanağı olmayan, anlamı abartan, eksik bırakan veya başka bir dil bilgisi kuralını anlatan seçeneği sil. Türkçe sorularında doğru cevap genellikle metindeki ifadeyle birebir uyumlu olandır.";
+  }
+  if (question.sectionId === "sosyal") {
+    return "Seçenekleri elerken “bunu görseldeki/parçadaki bilgi gerçekten söylüyor mu?” diye sor. Söylemiyorsa, sen dışarıdan biliyor olsan bile bu soru için kullanma.";
+  }
+  if (question.sectionId === "matematik") {
+    return "Seçenek kontrolünde bulduğun sayıyı, aralığı veya ifadeyi seçeneklerle karşılaştır. Eğer işlem sonucu seçeneklerde yoksa genellikle verilenlerden birinin anlamı yanlış çevrilmiştir; başa dönüp birimleri ve koşulları kontrol et.";
+  }
+  if (question.sectionId === "fen") {
+    return "Fen seçeneklerinde kesinlik önemlidir. Deney veya şekil yalnız bir değişken hakkında bilgi veriyorsa, başka bir büyüklük için kesin yargı kuran seçenek elenir.";
+  }
+  return "Seçenekleri verilen bilgiye göre tek tek kontrol et.";
+}
+
+function getBeginnerSolution(question) {
+  return [
+    getBeginnerReadingNote(question),
+    `Bu soruyu çözmek için gereken temel bilgi: ${getBeginnerConceptNote(question)}`,
+    ...question.solution,
+    getBeginnerEliminationNote(question),
+    `Son kontrol: doğru cevap ${question.answer}. Çözümü bitirince görseldeki soru köküne geri dön ve cevabın gerçekten sorulan şeye cevap verdiğini kontrol et; böyle yaparsan aynı konu başka şekilde sorulduğunda da çözebilirsin.`
+  ];
+}
+
 function renderSolution(question) {
   if (!hasAttempted(question)) {
     return `<div class="solution-locked">
@@ -1624,8 +1702,8 @@ function renderSolution(question) {
       <span>${question.skill}</span>
       <span>Doğru cevap: ${question.answer}</span>
     </div>
-    <h3>Adım adım çözüm</h3>
-    <ol>${question.solution.map((step) => `<li>${step}</li>`).join("")}</ol>
+    <h3>Görsele göre sıfırdan adım adım çözüm</h3>
+    <ol>${getBeginnerSolution(question).map((step) => `<li>${step}</li>`).join("")}</ol>
     <div class="takeaway"><strong>Mini not:</strong> ${question.takeaway}</div>
     <label class="complete-toggle">
       <input type="checkbox" data-id="${question.key}" ${completed.has(question.key) ? "checked" : ""}>
